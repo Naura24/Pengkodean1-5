@@ -1,0 +1,129 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('images/cat-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #ff99cc; /* Pink shade */
+    padding: 20px;
+    color: white;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ff66b3; /* Darker pink */
+    margin: 5px 0;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.sidebar ul li:hover {
+    background-color: #ff3399; /* Even darker pink */
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 10px;
+    margin: 10px;
+}
+
+h1 {
+    color: #ff3399; /* Pink */
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-bar input, .search-bar select, .search-bar button {
+    padding: 10px;
+    border: 1px solid #ff99cc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    background-color: #ff66b3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #ff3399;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #ff99cc;
+    color: white;
+}
+
+td {
+    background-color: #fff0f5; /* Light pink */
+}
+
+button.issue-btn, button.edit-btn, button.delete-btn {
+    background-color: #ff66b3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+button.issue-btn:hover, button.edit-btn:hover, button.delete-btn:hover {
+    background-color: #ff3399;
+}
+
+#addItemForm, #editItemForm {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff0f5;
+    border-radius: 5px;
+}
+
+#addItemForm input, #editItemForm input {
+    margin: 5px 0;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid #ff99cc;
+    border-radius: 5px;
+}

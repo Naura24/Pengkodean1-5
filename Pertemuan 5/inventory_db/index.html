@@ -1,0 +1,71 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li>Inventory</li>
+                <li>Orders</li>
+                <li>Order History</li>
+                <li>Issued Items</li>
+                <li>Users</li>
+                <li>Admin Actions</li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1>Inventory</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Enter Item Name (exact name)">
+                <button onclick="searchItem()">Search</button>
+                <select>
+                    <option>ALL Items</option>
+                </select>
+                <button onclick="showAddItemForm()">Add Items</button>
+            </div>
+            <div id="addItemForm" style="display: none;">
+                <h3>Add New Item</h3>
+                <input type="text" id="itemName" placeholder="Item Name">
+                <input type="number" id="itemCost" placeholder="Item Cost">
+                <input type="text" id="description" placeholder="Description">
+                <input type="number" id="quantity" placeholder="Quantity">
+                <button onclick="addItem()">Submit</button>
+            </div>
+            <div id="editItemForm" style="display: none;">
+                <h3>Edit Item</h3>
+                <input type="hidden" id="editItemId">
+                <input type="text" id="editItemName" placeholder="Item Name">
+                <input type="number" id="editItemCost" placeholder="Item Cost">
+                <input type="text" id="editDescription" placeholder="Description">
+                <input type="number" id="editQuantity" placeholder="Quantity">
+                <input type="number" id="editAvailable" placeholder="Available">
+                <button onclick="updateItem()">Update</button>
+            </div>
+            <table id="inventoryTable">
+                <thead>
+                    <tr>
+                        <th>Sno</th>
+                        <th>Item Name</th>
+                        <th>Item Cost</th>
+                        <th>Description</th>
+                        <th>Quantity</th>
+                        <th>Available</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="inventoryBody">
+                    <!-- Data will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
